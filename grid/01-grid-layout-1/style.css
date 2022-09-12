@@ -4,6 +4,18 @@ body, html {
 }
 
 .container {
+  display: grid;
+  grid-template-columns:repeat(4 , 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: "header header header header"
+                        "sidebar nav nav nav"
+                        "sidebar article article article"
+                        "sidebar article article article"
+                        "sidebar article article article"
+                        "sidebar article article article"
+                        "sidebar article article article"
+                        "footer footer footer footer";
+  gap: 16px;
   text-align: center;
   height: 100%;
   padding: 16px;
@@ -20,19 +32,23 @@ body, html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #d7c68a;
+  grid-area: header;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #be8c78;
+  grid-area: sidebar;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #64bbc3;
+  grid-area: nav;
 }
 
 .article {
-  background-color: #bccbde;
+  background-color: #7294be;
+  grid-area: article;
 }
 
 .article p {
@@ -43,5 +59,6 @@ body, html {
 }
 
 .footer {
-  background-color: #393f4d;
+  background-color: #43464d;
+  grid-area: footer;
 }
